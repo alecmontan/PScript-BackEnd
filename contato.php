@@ -20,9 +20,6 @@
 		input.ng-dirty.ng-invalid {
 		    border-color: red;
 		}
-		input.button.ng-disabled{
-			background-color: lightgray;
-		}
 	</style>
   </head>
   <body ng-controller="ComentList">
@@ -65,7 +62,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="row">
-								<h4 align="center">Contato</h4>
+								<h2 align="center" style="color: white">Contato</h2>
 										<form name="add_coment" novalidate>
 											<input type="hidden" name="id" ng-model="id">
 											<input type="text" name="nome" ng-model="nome" size="50" placeholder="Digite o seu nome" required>
