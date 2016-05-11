@@ -43,8 +43,9 @@ comentApp.controller('ComentList', function ($scope,$http) {
         )
         .success(function (data, status, headers, config) {
           $scope.get_coment();
-          $scope.add_cmt = true;
-          $scope.update_cmt = false;
+          $scope.nome='';
+          $scope.coment='';
+          $scope.add_coment.$setPristine();
         })
         .error(function(data, status, headers, config){
            
@@ -104,9 +105,10 @@ comentApp.controller('ComentList', function ($scope,$http) {
                   $scope.get_coment();
                   $scope.add_cmt = true;
                   $scope.update_cmt = false;
-                  $scope.nome="";
-                  $scope.coment="";
-                  alert("Comentário editado.");
+                  $scope.nome='';
+                  $scope.coment='';
+                  $scope.add_coment.$setPristine();
+                  
                 })
                 .error(function(data, status, headers, config){
                    
